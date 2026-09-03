@@ -75,6 +75,20 @@ if html is not None:
         if not re.search(rf'<meta\s+name="{re.escape(name)}"', html):
             fail(f"missing Twitter Card tag: {name}")
 
+    og_image_match = re.search(r'<meta\s+property="og:image"\s+content="([^"]*)"', html)
+    if not og_image_match:
+        warn("no og:image set (fine if no social-preview image exists yet)")
+    else:
+        og_image_url = og_image_match.group(1)
+        if not og_image_url.startswith(CANONICAL):
+            fail(f"og:image is not an absolute URL under the canonical base: {og_image_url!r}")
+        else:
+            image_path = PUBLIC / og_image_url[len(CANONICAL):]
+            if not image_path.exists():
+                fail(f"og:image referenced but missing on disk: {image_path.relative_to(ROOT)}")
+        if not re.search(r'<meta\s+name="twitter:image"', html):
+            fail("og:image is set but twitter:image is missing")
+
     h1_matches = re.findall(r"<h1[^>]*>(.*?)</h1>", html, re.S)
     if len(h1_matches) != 1:
         fail(f"expected exactly one <h1>, found {len(h1_matches)}")
