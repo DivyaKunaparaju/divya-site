@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://divyakunaparaju.github.io/divya-site/sitemap.xml
