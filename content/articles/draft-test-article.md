@@ -4,7 +4,7 @@ slug: draft-test-article
 summary: A placeholder used to confirm Pages CMS is wired up correctly. Not for
   publication.
 date: 2026-09-08
-draft: true
+draft: false
 ---
 This is a test entry created while setting up Pages CMS. It exists to confirm that:
 
