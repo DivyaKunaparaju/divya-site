@@ -41,10 +41,6 @@ Yet many enterprise leaders continue to manage AI like a traditional software ro
 
 To bridge this gap, organizations need an **AI Adoption Operating System**.
 
-![Enterprise AI Adoption Operating System Diagram](enterprise-ai-adoption-operating-system.jpg "Enterprise AI Adoption Operating System Framework")
-
----
-
 ## The Pilot Is a Technical Test. Scaling Is an Organizational Test.
 
 A pilot operates within controlled boundaries. The team is small, the use case is narrow, and exceptions are handled informally. Highly motivated participants compensate for incomplete processes, and senior sponsors intervene when decisions stall.
@@ -71,8 +67,6 @@ Improving the underlying model is only one variable in improving the business ou
 
 At the enterprise level, these interdependencies cannot be managed through standard project management plans alone.
 
----
-
 ## The 4 Layers of an AI Adoption Operating System
 
 An operating system is not a central committee or a 100-page governance manual. It is the **minimum set of repeatable mechanisms** that allows an organization to make confident decisions about AI.
@@ -88,8 +82,6 @@ It consists of four interconnected layers:
 4. **Value Measurement:** Clear metrics distinguishing raw activity from economic return.
 
 A weakness in any single layer will stall an otherwise promising initiative.
-
----
 
 ### 1. Decision Rights: Making Ownership Explicit
 
@@ -108,8 +100,6 @@ When accountability is spread this thin, decisions either escalate endlessly or 
 * **Workflow Adoption Owner:** Accountable for embedding the tool into daily operations.
 
 > **The Litmus Test:** When an AI system produces an unacceptable output, can your organization instantly identify who has the authority to pause, correct, restrict, or continue its use? If that requires assembling an ad hoc committee, your decision rights are not ready for scale.
-
----
 
 ### 2. Data & Risk Gates: Proportional Control over Universal Bottlenecks
 
@@ -133,33 +123,27 @@ Each use case should be classified before deployment based on:
 
 Rather than simply recording that a review took place, a risk gate must answer a clear decision question: *What empirical evidence must be demonstrated before this system can move to the next level of operational exposure?*
 
----
-
 ### 3. Capability Supply: Enabling Operations, Not Just Literacy
 
 Enterprise capability is frequently reduced to passive training: completion metrics, prompting webinars, and basic awareness courses. 
 
 Training completion is an **input**. Capability is the **demonstrated ability to perform work differently**.
 
-| Target Role | Core Capability Required |
+Capabilities must be tailored across every layer of the enterprise:
 
-| :--- | :--- |
+* **Executives:** Evaluating capital allocation, risk appetite, and strategic disruption
 
-| **Executives** | Evaluating capital allocation, risk appetite & strategic disruption |
+* **Business Leaders:** Redesigning processes and owning value realization
 
-| **Business Leaders** | Redesigning processes & owning value realization |
+* **Product Leads:** Connecting requirements, evaluation, controls, and adoption
 
-| **Product Leads** | Connecting requirements, evaluation, controls & adoption |
+* **Technical Teams:** Advanced engineering, RAG optimization, and model monitoring
 
-| **Technical Teams** | Advanced engineering, RAG optimization & model monitoring |
+* **Risk & Legal:** Understanding architecture to design proportionate gates
 
-| **Risk & Legal** | Understanding architecture to design proportionate gates |
-
-| **Frontline Staff** | Output validation, edge-case handling & escalation |
+* **Frontline Staff:** Output validation, edge-case handling, and escalation
 
 Instead of asking *"How many people completed AI training?"*, leadership must ask: **"Which AI-enabled workflows can our teams now execute safely and effectively?"**
-
----
 
 ### 4. Adoption & Value Measurement: Separating Activity from Return
 
@@ -167,21 +151,15 @@ AI dashboards love metrics that are easy to count: licenses issued, users activa
 
 These are operational activity signals, not proof of value. A high-performing measurement framework separates activity from strategic impact across four clear tiers:
 
-| Measurement Level | What It Evaluates | Example Metric |
+* **Level 1 — Activity:** Tool access and interaction *(e.g., Monthly Active Users, licenses assigned)*
 
-| :--- | :--- | :--- |
+* **Level 2 — Adoption:** Behavior and process shift *(e.g., % of eligible cases processed through the AI workflow)*
 
-| **1. Activity** | Tool access and interaction | Monthly Active Users (MAU), licenses assigned |
+* **Level 3 — Operational Outcome:** Task-level performance change *(e.g., Reduced cycle time, lower error rates)*
 
-| **2. Adoption** | Behavior and process shift | % of eligible cases processed through the AI workflow |
-
-| **3. Operational Outcome** | Task-level performance change | Reduced cycle time, error rates, or rework volume |
-
-| **4. Enterprise Value** | Strategic and financial return | Capacity released, costs avoided, net new revenue |
+* **Level 4 — Enterprise Value:** Strategic and financial return *(e.g., Capacity released, costs avoided, revenue growth)*
 
 Every scaled AI initiative must establish a baseline, a target behavior change, an operational outcome, and a clear value hypothesis *before* deployment.
-
----
 
 ## Start with a Minimum Viable Operating System (MVOS)
 
@@ -191,25 +169,23 @@ Instead, establish a **Minimum Viable Operating System** across a small portfoli
 
 For every prospective project, require leaders to answer these eight operational questions:
 
- *[ ]* *1. What specific business outcome are we changing?**
+1. **What specific business outcome are we changing?**
 
- *[ ]* *2. Who is the single accountable owner for that outcome?**
+2. **Who is the single accountable owner for that outcome?**
 
- *[ ]* *3. What data will the system use, and who is authorized to access it?**
+3. **What data will the system use, and who is authorized to access it?**
 
- *[ ]* *4. What can go wrong, and what is the severity of failure?**
+4. **What can go wrong, and what is the severity of failure?**
 
- *[ ]* *5. What empirical evidence is required before expanding exposure?**
+5. **What empirical evidence is required before expanding exposure?**
 
- *[ ]* *6. Where must human judgment remain in the workflow?**
+6. **Where must human judgment remain in the workflow?**
 
- *[ ]* *7. Which specific roles or processes must change?**
+7. **Which specific roles or processes must change?**
 
- *[ ]* *8. How will we measure adoption, operational performance, and value?**
+8. **How will we measure adoption, operational performance, and value?**
 
 As gaps emerge in early implementations, capture the lessons and convert them into standard, reusable enterprise patterns: standardized risk tiers, evaluation templates, role definitions, and capability tracks.
-
----
 
 ## The Leadership Imperative
 
@@ -217,6 +193,10 @@ Access to AI tools is expanding far faster than the organizational capacity to s
 
 The competitive advantage will not belong to the companies that launch the most pilots. It will belong to the leaders who integrate technology with decision rights, risk gates, capabilities, workflows, and measurable value.
 
-The executive question is now:  
+The executive question is no longer:  
+
+> *"Which AI tools should we deploy?"*
+
+It is now:  
 
 > **"What must change in how our organization operates so that AI can deliver durable value?"**
