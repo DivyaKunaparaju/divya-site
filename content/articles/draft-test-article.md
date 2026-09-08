@@ -62,6 +62,8 @@ At the enterprise level, these interdependencies cannot be managed through stand
 
 ## The 4 Layers of an AI Adoption Operating System
 
+![The 4 Layers of an AI Adoption Operating System](/divya-site/media/articles/AI%20Adoption%20Operating%20System.jpeg)
+
 An operating system is not a central committee or a 100-page governance manual. It is the **minimum set of repeatable mechanisms** that allows an organization to make confident decisions about AI.
 
 It consists of four interconnected layers:

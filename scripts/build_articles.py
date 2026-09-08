@@ -329,11 +329,6 @@ def article_page(article):
         image_url = f"{DOMAIN}{article.image}" if article.image.startswith("/") else f"{BASE_URL}/{article.image}"
     else:
         image_url = None
-    figure = (
-        f'          <img class="article-hero-image" src="{image_url}" alt="{_esc(article.title)}" loading="eager" />\n'
-        if image_url
-        else ""
-    )
     json_ld_image = f',\n    "image": "{image_url}"' if image_url else ""
 
     json_ld = f"""  <script type="application/ld+json">
@@ -353,7 +348,7 @@ def article_page(article):
       <div class="section-inner section-inner--article">
         <article class="article">
           <p class="article-back"><a href="/divya-site/articles/">&larr; Back to Insights</a></p>
-{figure}          <h1 class="article-title">{_esc(article.title)}</h1>
+          <h1 class="article-title">{_esc(article.title)}</h1>
           <p class="article-byline">{AUTHOR_NAME} &middot; {article.date}</p>
           <div class="article-body">
 {article.body_html}

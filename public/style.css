@@ -548,13 +548,6 @@ a {
   margin-bottom: 0;
 }
 
-.article-hero-image {
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius);
-  margin-bottom: 2.5rem;
-}
-
 .article-title {
   font-family: var(--font-display);
   font-size: clamp(1.75rem, 4vw, 2.75rem);
@@ -634,6 +627,8 @@ a {
   padding: 0;
 }
 .article-body img {
+  width: 100%;
+  height: auto;
   border-radius: var(--radius);
 }
 
