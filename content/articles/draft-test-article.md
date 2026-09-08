@@ -64,9 +64,9 @@ At the enterprise level, these interdependencies cannot be managed through stand
 
 An operating system is not a central committee or a 100-page governance manual. It is the **minimum set of repeatable mechanisms** that allows an organization to make confident decisions about AI.
 
-It consists of four interconnected layers:
+![Enterprise AI Adoption Operating System Diagram](</divya-site/media/articles/AI Adoption Operating System.jpeg>)
 
-![Enterprise AI Adoption Operating System Framework](</media/articles/AI Adoption Operating System.jpeg>)
+It consists of four interconnected layers:
 
 1. **Decision Rights:** Explicit ownership of business outcomes, system performance, and risk.
 2. **Data & Risk Gates:** Proportional controls tied to real operational exposure.
