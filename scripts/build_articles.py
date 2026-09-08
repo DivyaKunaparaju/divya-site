@@ -221,11 +221,9 @@ def load_articles():
 # ─── HTML templates ────────────────────────────────────────────────────────
 NAV = """  <nav class="nav" id="nav" aria-label="Site navigation">
     <div class="nav-inner">
-      <a href="/divya-site/" class="nav-logo" aria-label="Divya Kunaparaju — home">DK</a>
       <ul class="nav-links" id="nav-links" role="list">
         <li><a href="/divya-site/#about">About</a></li>
         <li><a href="/divya-site/#expertise">Expertise</a></li>
-        <li><a href="/divya-site/#projects">Projects</a></li>
         <li><a href="/divya-site/articles/">Insights</a></li>
         <li><a href="/divya-site/#contact" class="nav-cta">Contact</a></li>
       </ul>

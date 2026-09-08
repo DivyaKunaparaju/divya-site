@@ -100,19 +100,8 @@ a {
   padding: 0 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 2rem;
-}
-
-.nav-logo {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  color: var(--accent);
-  letter-spacing: 0.05em;
-  flex-shrink: 0;
-}
-.nav-logo:hover {
-  color: var(--accent-light);
 }
 
 .nav-links {
@@ -197,17 +186,6 @@ a {
 
 .hero-content {
   max-width: 700px;
-}
-
-.hero-location {
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1.5rem;
-  animation: fadeUp 0.7s ease-out both;
-  animation-delay: 0s;
 }
 
 /* The aesthetic risk: large italic serif in the hero — editorial, intelligent */
@@ -666,6 +644,9 @@ a {
   border-top: 1px solid var(--border);
   transition: gap var(--transition);
 }
+.contact-link[hidden] {
+  display: none;
+}
 .contact-link:last-child {
   border-bottom: 1px solid var(--border);
 }
@@ -782,7 +763,6 @@ a {
   html {
     scroll-behavior: auto;
   }
-  .hero-location,
   .hero-name,
   .hero-tagline,
   .hero-subtext,
