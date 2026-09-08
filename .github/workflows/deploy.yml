@@ -24,6 +24,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Build articles
+        run: python3 scripts/build_articles.py
+
       - name: Verify SEO essentials
         run: python3 scripts/verify-seo.py
 

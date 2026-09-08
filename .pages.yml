@@ -1,0 +1,68 @@
+media:
+  - name: articles
+    label: Article images
+    input: public/media/articles
+    output: /divya-site/media/articles
+
+content:
+  - name: articles
+    label: Articles
+    type: collection
+    path: content/articles
+    format: yaml-frontmatter
+    filename: "{fields.slug}.md"
+    view:
+      fields: [title, draft, date]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: slug
+        label: URL slug
+        type: string
+        required: true
+        description: "Lowercase, hyphens only, no spaces. Sets the article's URL: /articles/<slug>/"
+      - name: summary
+        label: Short summary
+        type: text
+        required: true
+        description: "Shown on the Insights listing page. Also used as the SEO description if you leave SEO description blank."
+      - name: date
+        label: Publication date
+        type: date
+        required: true
+        options:
+          format: "yyyy-MM-dd"
+      - name: image
+        label: Featured image
+        type: image
+        required: false
+        options:
+          media: articles
+      - name: draft
+        label: Save as draft
+        type: boolean
+        default: true
+        description: "Checked = hidden from the live site. Uncheck when you're ready to publish."
+      - name: seoTitle
+        label: SEO title
+        type: string
+        required: false
+        description: "Optional. Defaults to the Title above if left blank."
+      - name: seoDescription
+        label: SEO description
+        type: text
+        required: false
+        description: "Optional. Defaults to the Short summary above if left blank."
+      - name: body
+        label: Article body
+        type: rich-text
+        required: true
+        options:
+          media: articles

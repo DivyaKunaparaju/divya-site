@@ -15,6 +15,9 @@ PUBLIC = ROOT / "public"
 CANONICAL = "https://divyakunaparaju.github.io/divya-site/"
 NAME = "Divya Kunaparaju"
 
+sys.path.insert(0, str(ROOT / "scripts"))
+import build_articles as ba  # noqa: E402 — reuse the same frontmatter/Markdown loader
+
 failures = []
 warnings = []
 
@@ -150,8 +153,69 @@ if sitemap_xml is not None:
                 fail(f"sitemap.xml URL outside the expected base path: {loc!r}")
             if "#" in loc:
                 fail(f"sitemap.xml contains a fragment-only URL: {loc!r}")
+    else:
+        locs = []
+else:
+    locs = []
+
+# ─── Articles (Pages CMS content) ──────────────────────────────────────────
+articles, article_errors = ba.load_articles()
+for path, err in article_errors:
+    fail(f"content/articles parse error in {path.relative_to(ROOT)}: {err}")
+
+published = [a for a in articles if not a.draft]
+drafts = [a for a in articles if a.draft]
+
+for a in drafts:
+    leaked = PUBLIC / "articles" / a.slug / "index.html"
+    if leaked.exists():
+        fail(f"draft article leaked into the public build: {leaked.relative_to(ROOT)}")
+
+for a in published:
+    out = PUBLIC / "articles" / a.slug / "index.html"
+    if not out.exists():
+        fail(f"published article missing rendered output: {out.relative_to(ROOT)} — run scripts/build_articles.py")
+        continue
+    article_html = out.read_text(encoding="utf-8")
+
+    canonical_match = re.search(r'<link\s+rel="canonical"\s+href="([^"]*)"', article_html)
+    if not canonical_match or canonical_match.group(1) != a.url:
+        fail(f"article '{a.slug}' canonical missing or mismatched (expected {a.url!r})")
+
+    if f"<title>{a.seo_title}" not in article_html and a.seo_title not in article_html:
+        fail(f"article '{a.slug}' <title> does not contain its own title")
+
+    ld_match = re.search(r'<script\s+type="application/ld\+json">(.*?)</script>', article_html, re.S)
+    if not ld_match:
+        fail(f"article '{a.slug}' has no JSON-LD block")
+    else:
+        try:
+            ld_data = json.loads(ld_match.group(1))
+            if ld_data.get("@type") != "Article":
+                fail(f"article '{a.slug}' JSON-LD @type is {ld_data.get('@type')!r}, expected 'Article'")
+            if ld_data.get("author", {}).get("name") != NAME:
+                fail(f"article '{a.slug}' JSON-LD author is not {NAME!r}")
+        except json.JSONDecodeError as exc:
+            fail(f"article '{a.slug}' JSON-LD is not valid JSON: {exc}")
+
+listing_path = PUBLIC / "articles" / "index.html"
+if not listing_path.exists():
+    fail("missing file: public/articles/index.html (the Insights listing page)")
+else:
+    listing_html = listing_path.read_text(encoding="utf-8")
+    for a in published:
+        if f"/articles/{a.slug}/" not in listing_html:
+            fail(f"published article '{a.slug}' is not linked from the Insights listing page")
+
+listing_url = f"{CANONICAL}articles/"
+if listing_url not in locs:
+    fail(f"sitemap.xml does not include the Insights listing page {listing_url!r}")
+for a in published:
+    if a.url not in locs:
+        fail(f"sitemap.xml does not include published article {a.slug!r}")
 
 print(f"Checked {PUBLIC}")
+print(f"Articles: {len(published)} published, {len(drafts)} draft.")
 for w in warnings:
     print(f"WARN: {w}")
 if failures:
