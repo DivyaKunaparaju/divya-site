@@ -64,7 +64,7 @@ At the enterprise level, these interdependencies cannot be managed through stand
 
 An operating system is not a central committee or a 100-page governance manual. It is the **minimum set of repeatable mechanisms** that allows an organization to make confident decisions about AI.
 
-<img src="/divya-site/media/articles/AI%20Adoption%20Operating%20System.jpeg" alt="Enterprise AI Adoption Operating System Diagram" style="width:100%; height:auto; margin: 2rem 0; display:block;" />
+<img src="/divya-site/media/Article%20images/AI%20Adoption%20Operating%20System.jpeg" alt="Enterprise AI Adoption Operating System Framework" style="width:100%; height:auto; margin: 2rem 0; display:block;" />
 
 It consists of four interconnected layers:
 
