@@ -1,12 +1,10 @@
 ---
-title: "Draft test article — CMS setup check"
-slug: "draft-test-article"
-summary: "A placeholder used to confirm Pages CMS is wired up correctly. Not for publication."
-date: "2026-09-08"
-image: ""
+title: Draft test article — CMS setup check
+slug: draft-test-article
+summary: A placeholder used to confirm Pages CMS is wired up correctly. Not for
+  publication.
+date: 2026-09-08
 draft: true
-seoTitle: ""
-seoDescription: ""
 ---
 This is a test entry created while setting up Pages CMS. It exists to confirm that:
 
