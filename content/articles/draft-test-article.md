@@ -24,6 +24,8 @@ Part of why this matters more for generative AI than for the software most enter
 
 ## A Four-Layer Way to Reason Through It
 
+![The 4 Layers of an AI Adoption Operating System](/divya-site/media/articles/AI%20Adoption%20Operating%20System.jpeg)
+
 One way to structure the operating-model side of this problem is as four layers. This is a proposed model, not an inventory of what every organization already has in place -- the value is in using it to check where a specific initiative is exposed, not in treating it as a checklist that guarantees success if completed.
 
 **Decision Rights** -- who owns the business outcome, who owns the system's technical performance, and who owns the risk call. **Data & Risk Gates** -- what evidence a use case must produce before it is allowed more exposure, set in proportion to what is actually at stake rather than applied uniformly. **Capability Supply** -- which specific roles can operate, validate, and correct the system safely, as opposed to a general claim that "the workforce has been trained." **Value Measurement** -- whether the system is being used, separately from whether it is worth more than it costs.
