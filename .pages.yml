@@ -43,6 +43,14 @@ content:
         label: Featured image
         type: image
         required: false
+        description: "Shown inline in the article body and used for social-share previews."
+        options:
+          media: articles
+      - name: heroImage
+        label: Hero banner image
+        type: image
+        required: false
+        description: "Shown full-width at the top of the article with the title overlaid. Defaults to the Featured image above if left blank."
         options:
           media: articles
       - name: draft

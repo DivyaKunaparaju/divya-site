@@ -7,6 +7,7 @@ summary: Most enterprise AI pilots fail not on the underlying model, but on the
   value measurement.
 date: 2026-09-08
 image: /divya-site/media/articles/AI Adoption Operating System.jpeg
+heroImage: /divya-site/media/articles/Title header.png
 draft: false
 seoTitle: AI Adoption Operating Model Shift | Enterprise AI Governance
 seoDescription: "Why enterprise AI scaling requires an AI Adoption Operating
@@ -61,6 +62,8 @@ Improving the underlying model is only one variable in improving the business ou
 At the enterprise level, these interdependencies cannot be managed through standard project management plans alone.
 
 ## The 4 Layers of an AI Adoption Operating System
+
+![The 4 Layers of an AI Adoption Operating System](/divya-site/media/articles/AI%20Adoption%20Operating%20System.jpeg)
 
 An operating system is not a central committee or a 100-page governance manual. It is the **minimum set of repeatable mechanisms** that allows an organization to make confident decisions about AI.
 

@@ -189,6 +189,7 @@ class Article:
         self.summary = fields.get("summary", "").strip()
         self.date = fields.get("date", "").strip()
         self.image = (fields.get("image") or "").strip()
+        self.hero_image = (fields.get("heroImage") or "").strip()
         self.draft = bool(fields.get("draft", True))
         self.seo_title = (fields.get("seoTitle") or "").strip() or self.title
         self.seo_description = (fields.get("seoDescription") or "").strip() or self.summary
@@ -320,15 +321,19 @@ def page_shell(title, description, canonical, body_html, og_type="website", imag
 """
 
 
-def article_page(article):
-    # Pages CMS writes the image field as an already-site-rooted path
+def _media_url(path):
+    # Pages CMS writes image fields as already-site-rooted paths
     # (e.g. "/divya-site/media/articles/photo.jpg", per .pages.yml's media
     # `output` config) — so we prefix the bare domain, not BASE_URL, or
     # we'd double up the "/divya-site" segment.
-    if article.image:
-        image_url = f"{DOMAIN}{article.image}" if article.image.startswith("/") else f"{BASE_URL}/{article.image}"
-    else:
-        image_url = None
+    if not path:
+        return None
+    return f"{DOMAIN}{path}" if path.startswith("/") else f"{BASE_URL}/{path}"
+
+
+def article_page(article):
+    image_url = _media_url(article.image)
+    hero_image_url = _media_url(article.hero_image) or image_url
     json_ld_image = f',\n    "image": "{image_url}"' if image_url else ""
 
     json_ld = f"""  <script type="application/ld+json">
@@ -344,9 +349,9 @@ def article_page(article):
   }}
   </script>"""
 
-    if image_url:
+    if hero_image_url:
         title_block = f"""<div class="article-hero">
-            <img class="article-hero-image" src="{image_url}" alt="" loading="eager" />
+            <img class="article-hero-image" src="{hero_image_url}" alt="" loading="eager" />
             <div class="article-hero-scrim"></div>
             <h1 class="article-hero-title">{_esc(article.title)}</h1>
           </div>"""
