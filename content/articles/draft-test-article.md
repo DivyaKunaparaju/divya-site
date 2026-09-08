@@ -66,6 +66,8 @@ An operating system is not a central committee or a 100-page governance manual. 
 
 It consists of four interconnected layers:
 
+![Enterprise AI Adoption Operating System Framework](</media/articles/AI Adoption Operating System.jpeg>)
+
 1. **Decision Rights:** Explicit ownership of business outcomes, system performance, and risk.
 2. **Data & Risk Gates:** Proportional controls tied to real operational exposure.
 3. **Capability Supply:** Role-based ability to operate and validate AI safely.
