@@ -161,11 +161,7 @@ Access to AI tools is expanding far faster than the organizational capacity to s
 
 The competitive advantage will not belong to the companies that launch the most pilots. It will belong to the leaders who integrate technology with decision rights, risk gates, capabilities, workflows, and measurable value.
 
-The executive question is no longer:  
+The executive question is now : 
 
-> *"Which AI tools should we deploy?"*
-
-It is now:  
-
-> **"What must change in how our organization operates so that AI can deliver durable value?"**
+**"What must change in how our organization operates so that AI can deliver durable value?"**
 
