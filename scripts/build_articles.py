@@ -344,11 +344,20 @@ def article_page(article):
   }}
   </script>"""
 
+    if image_url:
+        title_block = f"""<div class="article-hero">
+            <img class="article-hero-image" src="{image_url}" alt="" loading="eager" />
+            <div class="article-hero-scrim"></div>
+            <h1 class="article-hero-title">{_esc(article.title)}</h1>
+          </div>"""
+    else:
+        title_block = f'<h1 class="article-title">{_esc(article.title)}</h1>'
+
     body = f"""    <section class="section reveal">
       <div class="section-inner section-inner--article">
         <article class="article">
           <p class="article-back"><a href="/divya-site/articles/">&larr; Back to Insights</a></p>
-          <h1 class="article-title">{_esc(article.title)}</h1>
+          {title_block}
           <p class="article-byline">{AUTHOR_NAME} &middot; {article.date}</p>
           <div class="article-body">
 {article.body_html}
