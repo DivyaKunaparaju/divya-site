@@ -358,7 +358,7 @@ def article_page(article):
     else:
         title_block = f'<h1 class="article-title">{_esc(article.title)}</h1>'
 
-    body = f"""    <section class="section reveal">
+    body = f"""    <section class="section">
       <div class="section-inner section-inner--article">
         <article class="article">
           <p class="article-back"><a href="/divya-site/articles/">&larr; Back to Insights</a></p>
@@ -397,7 +397,7 @@ def listing_page(published):
     else:
         list_html = '        <p class="articles-empty">No articles published yet — check back soon.</p>'
 
-    body = f"""    <section class="section reveal">
+    body = f"""    <section class="section">
       <div class="section-inner">
         <h1 class="section-eyebrow">Insights</h1>
         <p class="section-sub">Writing on enterprise transformation, cross-functional programme delivery, and practical AI adoption.</p>
